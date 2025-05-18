@@ -1,2 +1,2 @@
-# Desaf-o_Introducci-n_Python
+# Desafio_Introduccion_Python
 Desafío evaluado - Introducción a Python
