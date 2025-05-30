@@ -31,41 +31,53 @@ Donde:
 - Salida:  
   `Velocidad de Escape = 11174.6 [m/s]`  
 
----
-Actividad 2 - Rentabilidad
+�
+## Actividad 2 - Rentabilidad
 
 Un emprendedor quiere crear una app que provea un servicio de entrega de comida para mascotas. Este proyecto tiene buenos pronósticos, pero su éxito dependerá de cuántosusuarios pueda alcanzar. La manera en la que se medirá esto es calculando las utilidadesdel proyecto. Estas utilidades se pueden calcular mediante la siguiente fórmula:
 
-𝑈𝑡𝑖𝑙𝑖𝑑𝑎𝑑𝑒𝑠 = 𝑃 \* 𝑈 − 𝐺𝑇
-Donde:
-P: Precio de Suscripción
-U: Número de Usuarios
-GT: Gastos Totales
+𝑈𝑡𝑖𝑙𝑖𝑑𝑎𝑑𝑒𝑠 = 𝑃 * 𝑈 − 𝐺𝑇 Donde: P: Precio de Suscripción U: Número de Usuarios GT: Gastos Totales
 
 Para ello, se te pide desarrollar este cálculo en tres versiones.
 
-1. Crear el programa emprendedor1.py que utilice la fórmula descrita anteriormente para calcular las utilidades de un proyecto.Para ello utiliza input() para solicitar como dato el precio de suscripción P , el número de usuarios U y el gasto total GT.
+1. Crear el programa emprendedor1.py que utilice la fórmula descrita anteriormente para calcular las utilidades de un proyecto.Para ello utiliza input() para solicitar como dato el precio de suscripción P , el número de usuarios U y el gasto total GT.
 
-2. Supongamos ahora que el emprendedor considera 2 tipos de usuarios diferenciados,los usuarios normales y los usuarios premium a los cuales se les cobrará una suscripción un 50% mayor. Crea una segunda versión llamada emprendedor2.py que permita considerar el caso recién expuesto. Para ello modifica la fórmula de utilidades en la cual se solicite mediante input() los parámetros de entrada precios de suscripción P, así como el número de usuarios Unormal y Upremium y el gasto total GT .
+## Versiones del Programa
 
-3. Considera ahora una tercera versión llamada emprendedor3.py. Necesitarás la fórmula original de utilidades
+### Versión 2: Usuarios Premium
+#### emprendedor2.py
+- **Objetivo**: Diferenciar entre usuarios normales y premium
+- **Fórmula modificada**:
+```python
+Utilidades = (P * U_normal) + (P * 1.5 * U_premium) - GT
+```
+- **Inputs requeridos**:
+  - P: Precio base de suscripción
+  - U_normal: Cantidad usuarios normales
+  - U_premium: Cantidad usuarios premium
+  - GT: Gastos totales
 
-𝑈𝑡𝑖𝑙𝑖𝑑𝑎𝑑𝑒𝑠 = 𝑃 \* 𝑈 – 𝐺𝑇
+### Versión 3: Análisis Comparativo
+#### emprendedor3.py
+- **Fórmula base**: `Utilidades = P * U - GT`
+- **Variables requeridas**:
+  | Variable | Descripción |
+  |----------|-------------|
+  | P | Precio suscripción |
+  | U | Usuarios totales |
+  | GT | Gastos totales |
+  | U_anterior | Utilidades año previo |
 
-Ahora, debes crear una nueva función en la que se pida (por medio de input()) los
+#### Cálculo de Razón
+```python
+Razón = U_actuales / U_anterior  # Round(2)
+```
 
-siguientes datos:
-● precio de suscripción P
-● número de usuarios normales U
-● gastos GT
-● utilidades del año anterior Uanterior
-
-El programa debe calcular las utilidades actuales Uactuales y mostrar la razón entre las utilidades actuales y las del año anterior
-
-𝑅𝑎𝑧ó𝑛 = 𝑈𝑎𝑛𝑡𝑒𝑟𝑖𝑜𝑟
+#### ⚠️ Validaciones Importantes
+1. Todos los inputs deben ser numéricos
+2. U_anterior no puede ser cero
+3. Valores negativos no son válidos
 
 El resultado debe estar redondeado a dos decimales.
 
-Nota: Dentro de las instrucciones del programa advierte al usuario de
-
-valores que podrían impedir un buen funcionamiento de éste
+Nota: Dentro de las instrucciones del programa advierte al usuario de valores que podrían impedir un buen funcionamiento de éste
